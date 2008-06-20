@@ -24,7 +24,7 @@ unsigned long long now()
 	return tv.tv_sec*1000000 + tv.tv_usec;
 }
 
-void main()
+int main()
 {
 	int e;
 	XEvent ev;
@@ -80,6 +80,8 @@ void main()
 					XTestFakeButtonEvent(dpy, 1, ev.type == KeyPress, 0);
 				else if (!strcmp(keystr, "o"))
 					XTestFakeButtonEvent(dpy, 3, ev.type == KeyPress, 0);
+				else if (!strcmp(keystr, "p"))
+					XTestFakeButtonEvent(dpy, 2, ev.type == KeyPress, 0);
 				else if (!strcmp(keystr, "apostrophe") || !strcmp(keystr, "semicolon")) {
 					if (ev.type == KeyPress)
 						status |= STATUS_TAPJUMP;
@@ -152,7 +154,6 @@ void main()
 		if (status & STATUS_DOWN)
 			XTestFakeRelativeMotionEvent(dpy, 0, 2, 0);
 	}
-	
 	
 	exit(0);
 }
