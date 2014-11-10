@@ -57,5 +57,5 @@ Contact
 -------
 
 Patches? Questions? Patches? Comments? Patches? Bug reports? Patches? 
-Gripes?  Patches?  Send Joshua Wise an e-mail at <joshua at joshuawise dot
-com>.
+Gripes?  Patches?  Send Joshua Wise an e-mail at
+[joshua@joshuawise.com](mailto:joshua@joshuawise.com).
